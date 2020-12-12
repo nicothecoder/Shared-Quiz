@@ -18,22 +18,23 @@ namespace ConsoleApp1
             if (age < 17)
             {
                 Console.WriteLine("You are not allowed to drive!");
-            }
-            // Person aged 17
-            else if (age == 17) 
-            {
-                Console.WriteLine("Well done! You are now allowed to drive!");
+                Console.WriteLine("You are a low priority for the coronavirus vaccine.");
             }
             // Person aged over 17
-            else
+            else if (age >= 17) 
             {
-                Console.WriteLine("You are allowed to drive!");
+                if (age < 60)
+                {
+                    Console.WriteLine("Well done! You are allowed to drive!");
+                    Console.WriteLine("You are a lower priority for the coronavirus vaccine.");
+                }
+                else
+                {
+                    Console.WriteLine("You are a higher priority for the coronairus vaccine.");
+                }
             }
             Console.WriteLine("");
-            if
-            {
 
-            }
         }
     }
 }
