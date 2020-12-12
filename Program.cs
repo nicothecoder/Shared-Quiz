@@ -32,23 +32,34 @@ namespace ConsoleApp1
                 }
             }
             //New project
-            Console.WriteLine("How much do you tax each citizen?");
-            double taxValue = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("How many citizens are in your country?");
-            double citizens = Convert.ToInt32(Console.ReadLine());
-            double earnings = taxValue * citizens;
-            Console.WriteLine($"You are earning {earnings}");
-            // Cost of buying something + tax
-            Console.WriteLine("How much does the product cost that you are buying?");
-            double productCost = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("How much is the tax in your country, percentage wise?");
-            double buyTax = Convert.ToInt32(Console.ReadLine());
-            double taxTotal = productCost  *  buyTax  /  100;
-            Console.WriteLine($"The tax you will pay on top of the original price is {taxTotal}.");
-            double productTotal = taxTotal + productCost;
-            Console.WriteLine($"The total price of the product is now {productTotal}");
+            Console.WriteLine("Would you like to (1) find out the tax per citizen?");
+            Console.WriteLine("Or, Would you like to (2) find out the tax of a product?");
+            Console.WriteLine("Please choose 1 or 2");
+            double choice1 = Convert.ToInt32(Console.ReadLine());
 
-            
-        }
+            if (choice1 == 1)
+            {
+                Console.WriteLine("How much do you tax each citizen?");
+                double taxValue = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("How many citizens are in your country?");
+                double citizens = Convert.ToInt32(Console.ReadLine());
+                double earnings = taxValue * choice1;
+                Console.WriteLine($"You are earning {earnings}");
+            }
+            else if (choice1 == 2)
+            {
+                // Cost of buying something + tax
+
+                Console.WriteLine("How much does the product cost that you are buying?");
+                double productCost = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("How much is the tax in your country, percentage wise?");
+                double buyTax = Convert.ToInt32(Console.ReadLine());
+                double taxTotal = productCost * buyTax / 100;
+                Console.WriteLine($"The tax you will pay on top of the original price is {taxTotal}.");
+                double productTotal = taxTotal + productCost;
+                Console.WriteLine($"The total price of the product is now {productTotal}");
+            }
+
+        } 
     }
 }
