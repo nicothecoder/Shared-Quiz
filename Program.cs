@@ -32,19 +32,23 @@ namespace ConsoleApp1
                 }
             }
             //New project
-            Console.WriteLine("How much do you tax your citizens?");
+            Console.WriteLine("How much do you tax each citizen?");
             double taxValue = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("How many citizens are in your country?");
             double citizens = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("What percentage is the tax when they buy something?");
-            double taxPercent = Convert.ToInt32(Console.ReadLine());
+            double earnings = taxValue * citizens;
+            Console.WriteLine($"You are earning {earnings}");
+            // Cost of buying something + tax
+            Console.WriteLine("How much does the product cost that you are buying?");
+            double productCost = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("How much is the tax in your country, percentage wise?");
+            double buyTax = Convert.ToInt32(Console.ReadLine());
+            double taxTotal = productCost  *  buyTax  /  100;
+            Console.WriteLine($"The tax you will pay on top of the original price is {taxTotal}.");
+            double productTotal = taxTotal + productCost;
+            Console.WriteLine($"The total price of the product is now {productTotal}");
 
-
-
-
-
-
-
+            
         }
     }
 }
