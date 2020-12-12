@@ -9,15 +9,26 @@ namespace ConsoleApp1
             Console.WriteLine("What's your name?");
             string input = Console.ReadLine();
             Console.WriteLine($"Hello {input}!");
+
             // This part will tell the user their age in a string
             Console.WriteLine("How old are you?");
             double age = Convert.ToInt32(Console.ReadLine());
             // This part tells you if you are a higher priority based on your age
-            Console.WriteLine($"You are {age} years old");
+            Console.WriteLine("Are you a (1) boy or a (2) girl?");
+            double gender = Convert.ToInt32(Console.ReadLine());
+            if (gender == 1)
+            {
+                Console.WriteLine($"You are a boy that is {age} years old.");
+            }
+            else
+            {
+                Console.WriteLine($"You are a girl that is {age} years old");
+            }
             // Young person
             if (age < 17)
             {
                 Console.WriteLine("You are a low priority for the coronavirus vaccine.");
+                Console.WriteLine("You are not allowed to drive");
             }
             // Person aged over 17
             else if (age >= 17) 
@@ -25,10 +36,12 @@ namespace ConsoleApp1
                 if (age < 60)
                 {
                     Console.WriteLine("You are a lower priority for the coronavirus vaccine.");
+                    Console.WriteLine("You are allowed to drive");
                 }
                 else
                 {
                     Console.WriteLine("You are a higher priority for the coronavirus vaccine.");
+                    Console.WriteLine("You are allowed to drive");
                 }
             }
             //New project
@@ -58,7 +71,30 @@ namespace ConsoleApp1
                 Console.WriteLine($"The tax you will pay on top of the original price is {taxTotal}.");
                 double productTotal = taxTotal + productCost;
                 Console.WriteLine($"The total price of the product is now {productTotal}");
+
+
             }
+
+            if (gender == 1)
+            {
+                if (age < 65)
+                {
+                    double manretire = 65 - age;
+                    Console.WriteLine($"You have {manretire} years until you can retire.");
+                }
+                else
+                {
+                    Console.WriteLine("You have already retired");
+                }
+            }
+
+            else if (gender == 2)
+                if (age < 62)
+                {
+                    double womanretire = 62 - age;
+                    Console.WriteLine($"You have {womanretire} years until you can retire.");
+                }
+
 
         } 
     }
