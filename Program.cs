@@ -31,8 +31,16 @@ namespace ConsoleApp1
                     Console.WriteLine("You are a higher priority for the coronavirus vaccine.");
                 }
             }
-            Console.WriteLine("");
             //New project
+            Console.WriteLine("How much do you tax your citizens?");
+            double taxValue = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("How many citizens are in your country?");
+            double citizens = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("What percentage is the tax when they buy something?");
+            double taxPercent = Convert.ToInt32(Console.ReadLine());
+
+
+
 
 
 
